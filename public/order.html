@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Request | MurMade - Local Small-Batch Bakery</title>
+    <meta name="description" content="MurMade is a local small-batch bakery in the Dalton, Georgia metro area offering handmade baked goods, sourdough, and sweet treats.">
+    
+    <!-- Open Graph for Facebook/SEO -->
+    <meta property="og:title" content="Order Request | MurMade">
+    <meta property="og:description" content="Local handmade sourdough breads, sandwiches, and treats in Dalton, GA.">
+    <meta property="og:image" content="/assets/images/fulllogo_nobuffer[1].webp">
+    <meta property="og:url" content="https://murmade.local/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/fulllogo_nobuffer[1].webp" alt="MurMade Logo">
+            </a>
+            <button class="nav-mobile-btn">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="order.html">Order Request</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section-title">
+                <h1>Request an Order</h1>
+                <p>Submit your request for Saturday pickup. Limited quantities available.</p>
+            </div>
+            
+            <div class="banner warning" style="max-width: 800px; margin: 0 auto 2rem auto; background-color: #DAB289;">
+                <h3 style="color: #FFF; font-size: 1.3rem;">Friendly Reminder: Order requests must be submitted by Wednesday</h3>
+                <p style="color: #FFF">I will confirm by email to let you know your order has been received! If you missed the cutoff, visit us early at the market for the best selection of extras.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="panel">
+                    <form id="order-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone (Optional)</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup-date">Desired Pickup Date * (Saturdays 10am - 2pm)</label>
+                            <select id="pickup-date" class="form-control" required>
+                                <option value="Feb 21, 2026">February 21, 2026</option>
+                                <option value="Feb 28, 2026">February 28, 2026</option>
+                                <option value="Mar 7, 2026">March 7, 2026</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="request">What would you like? *</label>
+                            <textarea id="request" class="form-control" placeholder="E.g. 1 Traditional Sourdough Sandwich Loaf, 1 Pan of Cinnamon Rolls" required></textarea>
+                            <small style="color: var(--color-text-light); display: block; margin-top: 0.5rem;"><a href="menu.html" target="_blank" style="text-decoration:underline;">View Menu</a> for pricing & flight options.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Allergies / Notes (Optional)</label>
+                            <textarea id="notes" class="form-control" placeholder="Any special requests or allergies" style="min-height: 80px;"></textarea>
+                            <small style="color: var(--color-text-light); display: block; margin-top: 0.5rem;">Note: Items may contain allergens or undergo cross-contact.</small>
+                        </div>
+                        
+                        <div class="form-group mt-4 text-center">
+                            <button type="button" id="mailto-btn" class="btn btn-primary btn-block mb-3">Compose Email Request</button>
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">If the button above doesn't open your email app:</p>
+                            <button type="button" id="copy-btn" class="btn btn-secondary btn-block">Copy Request to Clipboard</button>
+                            <p id="copy-feedback" style="display: none; color: green; margin-top: 0.5rem; font-weight: bold;">Copied! You can now paste it into an email to mariannemurry@gmail.com.</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="panel" style="background-color: var(--color-bg); border-color: var(--color-secondary);">
+                        <h3>Contact Info</h3>
+                        <p>Feel free to reach out directly if you have questions.</p>
+                        <p><strong>Email:</strong> <a href="mailto:mariannemurry@gmail.com" style="color: var(--color-primary)">mariannemurry@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:7064638552" style="color: var(--color-primary)">706-463-8552</a></p>
+                        
+                        <h4 class="mt-4 mb-2">Expectation Check</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--color-text-light); line-height: 1.6;">
+                            <li>Please allow 2-3 days' notice for sourdough items.</li>
+                            <li>You will receive a confirmation email when I process your request.</li>
+                            <li>Pickup is 10am - 2pm at <a href="schedule.html" style="text-decoration: underline;">Fiddleheads Garden Center</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col" style="text-align: center;">
+                <h3 style="color: var(--color-secondary); font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;">MurMade</h3>
+                <p>Local small-batch baked goods.</p>
+                <p>Dalton, Georgia Area</p>
+                <p>
+                    <a href="mailto:mariannemurry@gmail.com">mariannemurry@gmail.com</a>
+                </p>
+                <p><a href="tel:7064638552">706-463-8552</a></p>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--color-secondary);">Quick Links</h4>
+                <a href="menu.html">Menu & Offerings</a>
+                <a href="schedule.html">Market Schedule</a>
+                <a href="order.html">Request an Order</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--color-secondary);">Connect</h4>
+                <a href="https://www.facebook.com/profile.php?id=61579601194967" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+                <br>
+                <div class="required-disclosure">
+                    "Produced at a residential property that is exempt from state inspection. May contain allergens."
+                </div>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; 2026 MurMade. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
